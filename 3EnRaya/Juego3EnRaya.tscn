@@ -1,0 +1,79 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Juego3EnRaya.gd" type="Script" id=1]
+[ext_resource path="res://MensajeGameOver.tscn" type="PackedScene" id=2]
+
+[node name="Juego3EnRaya" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -150.0
+margin_bottom = -196.0
+script = ExtResource( 1 )
+
+[node name="Tablero" type="VBoxContainer" parent="."]
+margin_right = 96.0
+margin_bottom = 96.0
+
+[node name="Fila0" type="HBoxContainer" parent="Tablero"]
+margin_right = 96.0
+
+[node name="Boton0" type="TextureButton" parent="Tablero/Fila0"]
+
+[node name="Boton1" type="TextureButton" parent="Tablero/Fila0"]
+margin_left = 4.0
+margin_right = 4.0
+
+[node name="Boton2" type="TextureButton" parent="Tablero/Fila0"]
+margin_left = 8.0
+margin_right = 8.0
+
+[node name="Fila1" type="HBoxContainer" parent="Tablero"]
+margin_top = 4.0
+margin_right = 96.0
+margin_bottom = 4.0
+
+[node name="Boton3" type="TextureButton" parent="Tablero/Fila1"]
+
+[node name="Boton4" type="TextureButton" parent="Tablero/Fila1"]
+margin_left = 4.0
+margin_right = 4.0
+
+[node name="Boton5" type="TextureButton" parent="Tablero/Fila1"]
+margin_left = 8.0
+margin_right = 8.0
+
+[node name="Fila2" type="HBoxContainer" parent="Tablero"]
+margin_top = 8.0
+margin_right = 96.0
+margin_bottom = 8.0
+
+[node name="Boton6" type="TextureButton" parent="Tablero/Fila2"]
+
+[node name="Boton7" type="TextureButton" parent="Tablero/Fila2"]
+margin_left = 4.0
+margin_right = 4.0
+
+[node name="Boton8" type="TextureButton" parent="Tablero/Fila2"]
+margin_left = 8.0
+margin_right = 8.0
+
+[node name="MensajeGameOver" parent="." instance=ExtResource( 2 )]
+
+[node name="Label" parent="MensajeGameOver/Contenedor" index="0"]
+margin_right = 67.0
+
+[node name="Button" parent="MensajeGameOver/Contenedor" index="1"]
+margin_right = 67.0
+margin_bottom = 38.0
+
+[connection signal="button_up" from="Tablero/Fila0/Boton0" to="." method="_on_Boton0_button_up"]
+[connection signal="button_up" from="Tablero/Fila0/Boton1" to="." method="_on_Boton1_button_up"]
+[connection signal="button_up" from="Tablero/Fila0/Boton2" to="." method="_on_Boton2_button_up"]
+[connection signal="button_up" from="Tablero/Fila1/Boton3" to="." method="_on_Boton3_button_up"]
+[connection signal="button_up" from="Tablero/Fila1/Boton4" to="." method="_on_Boton4_button_up"]
+[connection signal="button_up" from="Tablero/Fila1/Boton5" to="." method="_on_Boton5_button_up"]
+[connection signal="button_up" from="Tablero/Fila2/Boton6" to="." method="_on_Boton6_button_up"]
+[connection signal="button_up" from="Tablero/Fila2/Boton7" to="." method="_on_Boton7_button_up"]
+[connection signal="button_up" from="Tablero/Fila2/Boton8" to="." method="_on_Boton8_button_up"]
+
+[editable path="MensajeGameOver"]
